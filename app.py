@@ -8,7 +8,7 @@ if path.exists("env.py"):
     import env
 
 app = Flask(__name__)
-app.config["MONGO_DBNAME"] = 'recipes'
+app.config["MONGO_DBNAME"] = 'task_manager'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
@@ -18,13 +18,27 @@ mongo = PyMongo(app)
 def get_homepage():
     return render_template("index.html")
 
+
+
 @app.route('/get_recipes') # Sets the link for addrecipes.html to be used with other pages
 def get_recipes():
-    return render_template("recipe.html")
+    return render_template("recipe.html", recipe_lists=mongo.db.recipe_lists.find())
+
+
 
 @app.route('/get_addrecipes') # Sets the link for recipes.html to be used with other pages
 def get_addrecipes():
-    return render_template("addrecipe.html")
+    return render_template("addrecipe.html", add_recipe=mongo.db.recipe_lists.find())
+
+
+
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    addrecipe =  mongo.db.recipe_lists
+    addrecipe.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
+
+
 
 @app.route('/get_amendrecipes') # Sets the link for amend recipes.html to be used with other pages
 def get_amendrecipes():
