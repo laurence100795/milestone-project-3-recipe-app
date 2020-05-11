@@ -1,7 +1,17 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
+
+from os import path
+if path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
+app.config["MONGO_DBNAME"] = 'recipes'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+
+mongo = PyMongo(app)
 
 @app.route('/') # Selects this page to open on app start
 @app.route('/get_homepage') # Sets the link for index.html to be used with other pages
