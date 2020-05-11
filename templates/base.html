@@ -20,24 +20,24 @@
     <header>
       <nav class="nav-extended">
         <div class="nav-wrapper row">
-          <a href="" class=" col s12">Lozzy's Lovely Recipes</a>
+          <a href="{{url_for('get_homepage')}}" class=" col s12">Lozzy's Lovely Recipes</a>
         </div>
         <div class="nav-wrapper">
           <a data-activates="mobile-demo" class="button-collapse"
             ><i class="material-icons">menu</i></a
           >
           <ul id="nav-mobile" class="row hide-on-med-and-down">
-            <li class="col s3"><a href="">Home</a></li>
-            <li class="col s3"><a href="">Recipes</a></li>
-            <li class="col s3"><a href="">Add Recipes</a></li>
-            <li class="col s3"><a href="">Amend Recipes</a></li>
+            <li class="col s3"><a href="{{url_for('get_homepage')}}">Home</a></li>
+            <li class="col s3"><a href="{{url_for('get_recipes')}}">Recipes</a></li>
+            <li class="col s3"><a href="{{url_for('get_addrecipes')}}">Add Recipes</a></li>
+            <li class="col s3"><a href="{{url_for('get_amendrecipes')}}">Amend Recipes</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
             <li class="">Menu</li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Recipes</a></li>
-            <li><a href="">Add Recipes</a></li>
-            <li><a href="">Amend Recipes</a></li>
+            <li><a href="{{url_for('get_homepage')}}">Home</a></li>
+            <li><a href="{{url_for('get_recipes')}}">Recipes</a></li>
+            <li><a href="{{url_for('get_addrecipes')}}">Add Recipes</a></li>
+            <li><a href="{{url_for('get_amendrecipes')}}">Amend Recipes</a></li>
           </ul>
         </div>
       </nav>
