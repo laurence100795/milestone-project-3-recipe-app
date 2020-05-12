@@ -42,7 +42,34 @@ def insert_recipe():
 
 @app.route('/get_amendrecipes') # Sets the link for amend recipes.html to be used with other pages
 def get_amendrecipes():
-    return render_template("amendrecipe.html")
+    return render_template("amendrecipe.html", recipe_lists=mongo.db.recipe_lists.find())
+
+
+
+@app.route('/get_editrecipes/<recipe_id>') # Sets the link for recipes.html to be used with other pages
+def get_editrecipes(recipe_id):
+    recipe =  mongo.db.recipe_lists.find_one({"_id": ObjectId(recipe_id)})
+    return render_template('editrecipe.html', recipe=recipe)
+
+
+
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipe = mongo.db.recipe_lists
+    recipe.update( {'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name':request.form.get('recipe_name')
+    })
+    return redirect(url_for('get_amendrecipes'))
+
+
+
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipe_lists.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('get_amendrecipes'))
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
