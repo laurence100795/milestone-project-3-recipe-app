@@ -40,11 +40,11 @@
         />
       </div>
       <div class="input-field col s6">
-        <select>
+        <select name="level">
           <option value="" disabled selected>Choose your difficulty</option>
-          <option value="1">easy</option>
-          <option value="2">medium</option>
-          <option value="3">hard</option>
+          {% for diff in difficulty %}
+          <option value="1">{{diff.level}}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="input-field col s12">
@@ -67,37 +67,27 @@
         </select>
       </div>
       <div class="input-field col s6">
-        <select>
+        <select name="time">
           <option value="" disabled selected>Time to Cook</option>
-          <option value="1">15</option>
-          <option value="2">30</option>
-          <option value="3">45</option>
-          <option value="4">60</option>
-          <option value="5">75</option>
-          <option value="6">90</option>
-          <option value="7">105</option>
-          <option value="8">120</option>
+          {% for cook in cook_time %}
+          <option value="1">{{cook.time}}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="input-field col s6">
-        <select>
+        <select name="num">
           <option value="" disabled selected>Serves up to</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
+          {% for serve in serves %}
+          <option value="1">{{serve.num}}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="input-field col s6">
-        <select>
+        <select name="name">
           <option value="" disabled selected>Dietary Requirements</option>
-          <option value="1">Not Suitable for Vegetarians</option>
-          <option value="2">Suitable for Vegetarians</option>
-          <option value="3">Suitable for Vegans</option>
+          {% for diet in diets %}
+          <option value="1">{{diet.name}}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="input-field col s12">
