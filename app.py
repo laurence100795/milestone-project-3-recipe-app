@@ -29,7 +29,7 @@ def get_recipes():
 @app.route('/get_addrecipes') # Sets the link for recipes.html to be used with other pages
 def get_addrecipes():
     return render_template("addrecipe.html", add_recipe=mongo.db.recipe_lists.find(), cook_time=mongo.db.cook_time.find(),
-    difficulty=mongo.db.difficulty.find(), diets=mongo.db.diet.find(), serves=mongo.db.serves.find())
+    difficulty=mongo.db.difficulty.find(), diets=mongo.db.diet.find(), serves=mongo.db.serves.find(), prep_time=mongo.db.prep_time.find())
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
@@ -49,7 +49,7 @@ def get_amendrecipes():
 def get_editrecipes(recipe_id):
     recipe =  mongo.db.recipe_lists.find_one({"_id": ObjectId(recipe_id)})
     return render_template('editrecipe.html', recipe=recipe, add_recipe=mongo.db.recipe_lists.find(), cook_time=mongo.db.cook_time.find(),
-    difficulty=mongo.db.difficulty.find(), diets=mongo.db.diet.find(), serves=mongo.db.serves.find())
+    difficulty=mongo.db.difficulty.find(), diets=mongo.db.diet.find(), serves=mongo.db.serves.find(), prep_time=mongo.db.prep_time.find())
 
 
 
