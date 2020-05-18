@@ -1,0 +1,22 @@
+.recipe_header {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.recipe_instructions {
+    font-size: 18px;
+}
+
+.expand_header {
+    margin-top: auto;
+}
+
+.recipe_styling {
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.instructions_styling{
+    padding-bottom: 10px;
+    font-size: 16px;
+}

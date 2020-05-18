@@ -1,16 +1,59 @@
 {% extends "base.html" %} {% block content %}
 <h1>Recipe Page</h1>
-{% for recipe in recipe_lists %}
-<h2>{{recipe.recipe_name}}</h2>
-<h2>{{recipe.level}}</h2>
-<h2>{{recipe.time}}</h2>
-<h2>{{recipe.ptime}}</h2>
-<h2>{{recipe.num}}</h2>
-<h2>{{recipe.name}}</h2>
-<h2>{{recipe.href}}</h2>
-<h2>{{recipe.tools}}</h2>
-<h2>{{recipe.ingredients}}</h2>
-<h2>{{recipe.method}}</h2>
-{% endfor %}
 
+<ul class="collapsible" data-collapsible="accordion">
+  {% for recipe in recipe_lists %}
+  <li>
+    <div class="collapsible-header">
+      <div class="col s3 expand_header">
+        <i class="material-icons">expand_more</i>
+      </div>
+      <div class="col s9 recipe_header">
+        <strong>{{recipe.recipe_name}}</strong>
+      </div>
+    </div>
+    <div class="collapsible-body">
+      <div class="recipe_styling">
+        <strong>Recipe difficulty</strong> - {{recipe.level}}
+      </div>
+      <div class="recipe_styling"><strong>Serves</strong> - {{recipe.num}}</div>
+      <div class="recipe_styling">
+        <strong>Time to Prep</strong> - {{recipe.ptime}}
+      </div>
+      <div class="recipe_styling">
+        <strong>Time to Cook</strong> - {{recipe.time}}
+      </div>
+      <div class="recipe_styling">
+        <strong>Dietary</strong> - {{recipe.name}}
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header">
+      <div class="col s3 expand_header">
+        <i class="material-icons">expand_more</i>
+      </div>
+      <div class="col s9 recipe_instructions">
+        <strong>Instructions & Ingredients</strong>
+      </div>
+    </div>
+    <div class="collapsible-body">
+      <div class="instructions_styling">
+        <strong>Ingredients Required</strong> - {{recipe.ingredients}}
+      </div>
+      <div class="instructions_styling">
+        <strong>Specific Cooking Utensils Required</strong> - {% if recipe.tools
+        == "" %}
+        <span>Nothing Specific Required</span>
+        {% else %}
+        <span>{{recipe.tools}}</span>
+        {% endif %}
+      </div>
+      <div class="instructions_styling">
+        <strong>Cooking Instructions</strong> - {{recipe.method}}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}
