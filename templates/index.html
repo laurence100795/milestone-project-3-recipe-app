@@ -1,4 +1,80 @@
 {% extends "base.html" %} {% block content %}
-<h1>Home Page</h1>
 
+<div class="container home_container">
+  <div class="col s12">
+    <h1 class="Home_Header">Welcome To Lozzy's Lovely Recipes</h1>
+    <p>
+      This website was designed for you to store and share recipe ideas. If you
+      have something Delicous you'd like to share with the world please add it
+      it here and Share it with the world!
+    </p>
+    <p>
+      This has been designed to be user friendly for all ages so anyone can use
+      it. there are 3 extra pages for you to look into which and described
+      below.
+    </p>
+  </div>
+  <hr class="fullWidthDivider" />
+  <div class="col s12">
+    <h2>Page Descriptions</h2>
+    <h3>Recipes</h3>
+    <p>
+      This is the exciting page! This is the page the where you can view all the
+      recipes that people have produced and shared with you. there are two tabs
+      per recipes. the first part contains all the facts about the recipe e.g
+      serves up to, deitary requirements, timings etc.
+    </p>
+    <hr class="fullWidthDivider" />
+    <h3>Add Recipes</h3>
+    <p>
+      This is the recipe you go to if yoy feel like sharing. it's a very staight
+      forward clear cut form that you need to fill out and enter. not over the
+      top in options, choices and with a very simple design so everyone can
+      understand it.
+    </p>
+    <hr class="fullWidthDivider" />
+    <h3>Amend Recipes</h3>
+    <p>
+      This page contains to options for you firstly, to amend and edit recipes
+      that you have placed on the site if you would like to change them or
+      correct a previous error. The second option is to delete your recipe of
+      the site. if you're not happy with it or just don't want to store it here
+      anymore you have that option.
+    </p>
+    <hr class="fullWidthDivider" />
+    <h5>
+      Please don't go sabotaging over peoples creations it's unpleasant and we
+      don't tolerate that behaviour here.
+    </h5>
+  </div>
+  <div class="row">
+    <div class="col s4 home_image_width">
+    <h3 class="image_title">Recipes</h3>
+      <img
+        src="./static/images/HomeImage1.jpg"
+        class="Home_image"
+        alt="Recipe Image"
+        onclick="location='{{url_for('get_recipes')}}'"
+      />
+    </div>
+    <div class="col s4 home_image_width">
+    <h3 class="image_title">Add Recipes</h3>
+      <img
+        src="./static/images/HomeImage2.jpg"
+        class="Home_image"
+        alt="Add Recipe Image"
+        onclick="location='{{url_for('get_addrecipes')}}'"
+      />
+    </div>
+    <div class="col s4 home_image_width">
+    <h3 class="image_title">Amend Recipes</h3>
+      <img
+        src="./static/images/HomeImage3.jpg"
+        class="Home_image"
+        alt="Amend Recipe Image"
+        onclick="location='{{url_for('get_amendrecipes')}}'"
+      />
+    </div>
+  </div>
+</div>
 {% endblock %}

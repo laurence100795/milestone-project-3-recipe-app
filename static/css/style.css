@@ -1,22 +1,127 @@
+/*---------Page Styling---------*/
+
+body {
+  background-color: #dab17b;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.fullWidthDivider {
+  /*Divider to be used across different pages*/
+  width: 100%;
+  height: 4px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*---------Page Styling---------*/
+/*---------Nav---------*/
+.Nav_Header {
+  font-family: "Cormorant Upright", serif;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.Nav_Container {
+  background-color: #e69f40;
+}
+
+.Nav_Bottom {
+  font-family: "Cormorant Upright", serif;
+  text-align: center;
+  background-color: #d28e34;
+}
+
+.Nav_Options {
+  font-size: 20px;
+}
+
+#nav-mobile {
+  margin-bottom: 0;
+}
+/*---------Nav---------*/
+
+/*---------Home Page---------*/
+
+.Home_Header {
+  font-family: "Cormorant Upright", serif;
+  font-size: 56px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fafafa;
+  margin-top: 5px;
+  padding-top: 30px;
+}
+
+.home_container h2 {
+  font-family: "Cormorant Upright", serif;
+  font-size: 36px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fafafa;
+}
+
+.home_container h3 {
+  font-family: "Cormorant Upright", serif;
+  font-size: 30px;
+  text-align: center;
+  color: #fafafa;
+}
+
+.home_container h5 {
+  color: #fafafa;
+  font-family: 'Hepta Slab', serif;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.home_container p {
+  color: #fafafa;
+  font-family: 'Hepta Slab', serif;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.home_container {
+  background-color: #b79567;
+}
+
+/*---------Home Page---------*/
+
 .recipe_header {
   font-size: 24px;
   letter-spacing: 1px;
 }
 
 .recipe_instructions {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .expand_header {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .recipe_styling {
-    font-size: 16px;
-    padding-bottom: 5px;
+  font-size: 16px;
+  padding-bottom: 5px;
 }
 
-.instructions_styling{
-    padding-bottom: 10px;
-    font-size: 16px;
+.instructions_styling {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.Home_image {
+    height: inherit;
+    width: inherit;
+    cursor: pointer;
+}
+
+.home_image_width {
+    width: 100%!important;
+    padding-bottom: 15px!important;
 }
