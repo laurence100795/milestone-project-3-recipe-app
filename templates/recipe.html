@@ -2,58 +2,61 @@
 <h1 class="page-title">Recipe Page</h1>
 
 <ul class="collapsible" data-collapsible="accordion">
-  {% for recipe in recipe_lists %}
-  <li>
-    <div class="collapsible-header">
-      <div class="col-3 expand_header">
-        <i class="material-icons">expand_more</i>
-      </div>
-      <div class="col-9 recipe_header">
-        <strong>{{recipe.recipe_name}}</strong>
-      </div>
-    </div>
-    <div class="collapsible-body">
-      <div class="recipe_styling">
-        <strong>Recipe difficulty</strong> - {{recipe.level}}
-      </div>
-      <div class="recipe_styling"><strong>Serves</strong> - {{recipe.num}}</div>
-      <div class="recipe_styling">
-        <strong>Time to Prep</strong> - {{recipe.ptime}}
-      </div>
-      <div class="recipe_styling">
-        <strong>Time to Cook</strong> - {{recipe.time}}
-      </div>
-      <div class="recipe_styling">
-        <strong>Dietary</strong> - {{recipe.name}}
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="collapsible-header">
-      <div class="col-3 expand_header">
-        <i class="material-icons">expand_more</i>
-      </div>
-      <div class="col-9 recipe_instructions">
-        <strong>Instructions & Ingredients</strong>
-      </div>
-    </div>
-    <div class="collapsible-body">
-      <div class="instructions_styling">
-        <strong>Ingredients Required</strong> - {{recipe.ingredients}}
-      </div>
-      <div class="instructions_styling">
-        <strong>Specific Cooking Utensils Required</strong> - {% if recipe.tools
+	{% for recipe in recipe_lists %}
+	<li>
+		<div class="collapsible-header">
+			<div class="col-3 expand_header">
+				<i class="material-icons">expand_more</i>
+			</div>
+			<div class="col-9 recipe_header">
+				<strong>{{recipe.recipe_name}}</strong>
+			</div>
+		</div>
+		<div class="collapsible-body">
+			<div class="recipe_styling">
+				<strong>Recipe difficulty</strong> - {{recipe.level}}
+			</div>
+			<div class="recipe_styling"><strong>Serves</strong> - {{recipe.num}}</div>
+			<div class="recipe_styling">
+				<strong>Time to Prep</strong> - {{recipe.ptime}}
+			</div>
+			<div class="recipe_styling">
+				<strong>Time to Cook</strong> - {{recipe.time}}
+			</div>
+			<div class="recipe_styling">
+				<strong>Dietary</strong> - {{recipe.name}}
+			</div>
+			<div class="instructions_styling">
+				<strong>Specific Cooking Utensils Required</strong> - {% if recipe.tools
         == "" %}
-        <span>Nothing Specific Required</span>
-        {% else %}
-        <span>{{recipe.tools}}</span>
-        {% endif %}
-      </div>
-      <div class="instructions_styling">
-        <strong>Cooking Instructions</strong> - {{recipe.method}}
-      </div>
-    </div>
-  </li>
-  {% endfor %}
+				<span>Nothing Specific Required</span>
+				{% else %}
+				<span>{{recipe.tools}}</span>
+				{% endif %}
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="collapsible-header">
+			<div class="col-3 expand_header">
+				<i class="material-icons">expand_more</i>
+			</div>
+			<div class="col-9 recipe_instructions">
+				<strong>Instructions & Ingredients</strong>
+			</div>
+		</div>
+		<div class="collapsible-body">
+			<div class="instructions_styling">
+				<h5>Ingredients Required</h5>
+				{{recipe.ingredients}}
+			</div>
+			<div class="instructions_styling">
+				<h5>Cooking Instructions</h5>
+				{{recipe.method}}
+			</div>
+		</div>
+	</li>
+	<div class="col s12 recipe_divider"></div>
+	{% endfor %}
 </ul>
 {% endblock %}

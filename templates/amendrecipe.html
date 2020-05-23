@@ -1,26 +1,37 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="page-title">Amend Recipe Page</h1>
 <ul class="collapsible" data-collapsible="accordion">
-        {% for recipe in recipe_lists %}
-        <li>
-            <div class="collapsible-header">
-                <div class="col-3">
-                    <i class="material-icons">expand_more</i>
-                    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
-                    <a href="{{url_for('get_editrecipes', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                    
-                </div>
-                <div class=" task_header col-9">
-                    <strong>{{recipe.recipe_name}}</strong>
-                </div>
-            </div>
-            <div class="collapsible-body">
-                <span>
-                <p>this is a test of the collapsible</p>
-            </span>
-            </div>
-        </li>
-        {% endfor %}
+	{% for recipe in recipe_lists %}
+	<li>
+		<div class="collapsible-header">
+			<div class="col-3">
+				<i class="material-icons">expand_more</i>
 
-    </ul>
+			</div>
+			<div class=" task_header col-9 recipe_header">
+				<strong>{{recipe.recipe_name}}</strong>
+			</div>
+		</div>
+		<div class="collapsible-body amend-content-padding">
+			<a class="waves-effect waves-light btn modal-trigger delete_button" href="#modal1">Delete</a>
+			<a href="{{url_for('get_editrecipes', recipe_id=recipe._id)}}"
+				class="waves-effect waves-light btn btn_small edit_button">Edit</a>
+		</div>
+	</li>
+	<div class="col s12 recipe_divider"></div>
+
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>You're about to delete a recipe!</h4>
+			<p>If you're sure about going through with this please proceed but if this isn't one of your own recommend recipes please close without deleting</p>
+            <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect btn-flat"><strong>Close</strong></a>
+            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-action modal-close waves-effect btn-flat">Delete</a>
+            </div>
+        </div>
+
+	</div>
+	{% endfor %}
+
+</ul>
 {% endblock %}

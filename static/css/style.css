@@ -1,21 +1,25 @@
 /*---------Page Styling---------*/
 
-body { /* Body colour */
+body {
+  /* Body colour */
   background-color: #dab17b;
 }
 
-a { /* a tag style */
+a {
+  /* a tag style */
   color: inherit !important;
   text-decoration: none !important;
 }
 
-.fullWidthDivider { /* Text divider styles */
+.fullWidthDivider {
+  /* Text divider styles */
   width: 100%;
   height: 4px;
   color: rgba(0, 0, 0, 0.6);
 }
 
-.page-title { /* Homepage title styles */
+.page-title {
+  /* Homepage title styles */
   font-family: "Cormorant Upright", serif;
   font-size: 56px;
   color: #fafafa;
@@ -27,36 +31,43 @@ a { /* a tag style */
 
 /*---------Nav---------*/
 
-.Nav_Header { /* Nav title style */
+.Nav_Header {
+  /* Nav title style */
   font-family: "Cormorant Upright", serif;
   font-size: 48px;
   letter-spacing: 2px;
   text-align: center;
 }
 
-.Nav_Container { /* Nav container colour*/
+.Nav_Container {
+  /* Nav container colour*/
   background-color: #e69f40;
 }
 
-.Nav_Bottom { /* Nav bottom style */
+.Nav_Bottom {
+  /* Nav bottom style */
   font-family: "Cormorant Upright", serif;
   text-align: center;
   background-color: #d28e34;
 }
 
-.Nav_Options { /* Nav option sizing */
+.Nav_Options {
+  /* Nav option sizing */
   font-size: 20px;
 }
 
-#nav-mobile { /* ID margin amending */
+#nav-mobile {
+  /* ID margin amending */
   margin-bottom: 5px;
 }
 
-.side-nav { /* Mobile menu colour */
+.side-nav {
+  /* Mobile menu colour */
   background-color: #b79567;
 }
 
-.side-title { /* Mobile menu title colour */
+.side-title {
+  /* Mobile menu title colour */
   background-color: #9e8461;
 }
 
@@ -64,7 +75,8 @@ a { /* a tag style */
 
 /*---------Home Page---------*/
 
-.Home_Header { /* Home page header style */
+.Home_Header {
+  /* Home page header style */
   font-family: "Cormorant Upright", serif;
   font-size: 56px;
   letter-spacing: 2px;
@@ -74,7 +86,8 @@ a { /* a tag style */
   padding-top: 30px;
 }
 
-.home_container h2 { /* Home page h2 style */
+.home_container h2 {
+  /* Home page h2 style */
   font-family: "Cormorant Upright", serif;
   font-size: 36px;
   letter-spacing: 1px;
@@ -82,14 +95,16 @@ a { /* a tag style */
   color: #fafafa;
 }
 
-.home_container h3 { /* Home page h3 style */
+.home_container h3 {
+  /* Home page h3 style */
   font-family: "Cormorant Upright", serif;
   font-size: 22px;
   text-align: center;
   color: #fafafa;
 }
 
-.home_container h5 { /* Home page h5 style */
+.home_container h5 {
+  /* Home page h5 style */
   color: #fafafa;
   font-family: "Hepta Slab", serif;
   font-weight: 500;
@@ -97,84 +112,193 @@ a { /* a tag style */
   padding-bottom: 30px;
 }
 
-.home_container p { /* Home page text style */
+.home_container p {
+  /* Home page text style */
   color: #fafafa;
   font-family: "Hepta Slab", serif;
   font-weight: 300;
   padding-bottom: 10px;
+  text-align: center;
 }
 
-.home_container { /* Home container style */
+.home_container {
+  /* Home container style */
   background-color: #b79567;
 }
 
-.Home_image { /* homepage image styling */
+.Home_image {
+  /* homepage image styling */
   height: inherit;
   width: inherit;
   cursor: pointer;
 }
 
-.home_image_width { /* homepage image positioning */
+.home_image_width {
+  /* homepage image positioning */
   width: 100% !important;
   padding-bottom: 15px !important;
 }
 
+@media only screen and (max-width: 1050px) {
+  .image_title {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .image_title {
+    font-size: 28px !important;
+  }
+  .Home_Header {
+    font-size: 46px;
+  }
+}
 /*---------Home Page---------*/
 
-/*---------Recipe Page---------*/
+/*---------Recipe & Edit Page---------*/
 
-.recipe_header { /* recipe primary tab title style */ 
+.recipe_header {
+  /* recipe primary tab title style */
   font-size: 24px;
   letter-spacing: 1px;
 }
 
-.recipe_instructions { /* reicpe secondary tab style */
+.recipe_instructions {
+  /* reicpe secondary tab style */
   font-size: 18px;
 }
 
-.expand_header { /* expand icon styling */
+.expand_header {
+  /* expand icon styling */
   margin-top: auto;
 }
 
-.recipe_styling { /* recipe context styling */
+.recipe_styling {
+  /* recipe context styling */
   font-size: 16px;
   padding-bottom: 5px;
 }
 
-.instructions_styling { /* instructions context styling */
+.instructions_styling {
+  /* instructions context styling */
   padding-bottom: 10px;
   font-size: 16px;
 }
 
-/*---------Home Page---------*/
+.collapsible-header {
+  /* collapsible header colours */
+  background-color: #b79567;
+  border-color: #b79567 !important;
+  font-family: "Cormorant Upright", serif;
+  color: #fafafa;
+}
+
+.collapsible-body {
+  /* collapsible body colours */
+  border-bottom-color: #dab17b !important;
+  font-family: "Hepta Slab", serif;
+  color: #000;
+}
+
+.recipe_divider {
+  /* recipe splitters style */
+  height: 10px;
+}
+
+ul {
+  /* inner body border colours */
+  border-color: #b79567 !important;
+}
+
+.modal {
+  /* modal fits size to content */
+  height: auto !important;
+}
+
+.amend-content-padding {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.delete_button {
+  /* delete button stlying */
+  background-color: #b79567 !important;
+  color: #fafafa !important;
+  margin: 5px;
+}
+
+.delete_button:hover, /* delete button interactive stlying */
+.delete_button:active,
+.delete_button:link {
+  background-color: #7b603c !important;
+  color: #fafafa !important;
+}
+
+.edit_button {
+  /* edit button  stlying */
+  background-color: #fafafa !important;
+  color: #b79567 !important;
+  margin: 5px;
+}
+
+.edit_button:hover, /* edit button interactive stlying */
+.edit_button:active,
+.edit_button:link {
+  background-color: #8e8e8e !important;
+  color: #fafafa !important;
+}
+
+/*---------Recipe & Edit Page---------*/
 
 /*---------Edit & Add Page---------*/
 
-.form-style { /* Form background colour */
-    background-color: #b79567;
+.form-style {
+  /* Form background colour */
+  background-color: #b79567;
 }
 
-.input-field { /* Input field border colour */
-    color: #fafafa!important;
+.input-field {
+  /* Input field border colour */
+  color: #fafafa !important;
 }
 
-div input { /* Input border colour */
-    border-color: #fafafa!important;
+div input {
+  /* Input border colour */
+  border-color: #fafafa !important;
 }
 
-div textarea { /* textarea border style */
-    border-color: #fafafa!important;
+div textarea {
+  /* textarea border style */
+  border-color: #fafafa !important;
 }
 
-.caret { /* Caret colour */
-    color: #fafafa!important;
+.caret {
+  /* Caret colour */
+  color: #fafafa !important;
 }
 
-.label-style { /* Label text colour */
-    color: #fafafa!important;
+.label-style {
+  /* Label text colour */
+  color: #fafafa !important;
 }
 
-.button-padding { /* button spacing */
-    padding-bottom: 10px!important;
+.button-padding {
+  /* button spacing */
+  padding-bottom: 10px !important;
 }
+
+.recipe_button {
+  background-color: #dab17b;
+}
+
+.recipe_button {
+  background-color: #dab17b;
+}
+
+.recipe_button:hover,
+.recipe_button:active,
+.recipe_button:link {
+  background-color: #e2d0b7 !important;
+}
+
 /*---------Edit & Add Page---------*/
