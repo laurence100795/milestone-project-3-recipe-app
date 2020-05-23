@@ -1,52 +1,70 @@
 /*---------Page Styling---------*/
 
-body {
+body { /* Body colour */
   background-color: #dab17b;
 }
 
-a {
+a { /* a tag style */
   color: inherit !important;
   text-decoration: none !important;
 }
 
-.fullWidthDivider {
-  /*Divider to be used across different pages*/
+.fullWidthDivider { /* Text divider styles */
   width: 100%;
   height: 4px;
   color: rgba(0, 0, 0, 0.6);
 }
 
+.page-title { /* Homepage title styles */
+  font-family: "Cormorant Upright", serif;
+  font-size: 56px;
+  color: #fafafa;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 /*---------Page Styling---------*/
+
 /*---------Nav---------*/
-.Nav_Header {
+
+.Nav_Header { /* Nav title style */
   font-family: "Cormorant Upright", serif;
   font-size: 48px;
   letter-spacing: 2px;
   text-align: center;
 }
 
-.Nav_Container {
+.Nav_Container { /* Nav container colour*/
   background-color: #e69f40;
 }
 
-.Nav_Bottom {
+.Nav_Bottom { /* Nav bottom style */
   font-family: "Cormorant Upright", serif;
   text-align: center;
   background-color: #d28e34;
 }
 
-.Nav_Options {
+.Nav_Options { /* Nav option sizing */
   font-size: 20px;
 }
 
-#nav-mobile {
-  margin-bottom: 0;
+#nav-mobile { /* ID margin amending */
+  margin-bottom: 5px;
 }
+
+.side-nav { /* Mobile menu colour */
+  background-color: #b79567;
+}
+
+.side-title { /* Mobile menu title colour */
+  background-color: #9e8461;
+}
+
 /*---------Nav---------*/
 
 /*---------Home Page---------*/
 
-.Home_Header {
+.Home_Header { /* Home page header style */
   font-family: "Cormorant Upright", serif;
   font-size: 56px;
   letter-spacing: 2px;
@@ -56,7 +74,7 @@ a {
   padding-top: 30px;
 }
 
-.home_container h2 {
+.home_container h2 { /* Home page h2 style */
   font-family: "Cormorant Upright", serif;
   font-size: 36px;
   letter-spacing: 1px;
@@ -64,64 +82,99 @@ a {
   color: #fafafa;
 }
 
-.home_container h3 {
+.home_container h3 { /* Home page h3 style */
   font-family: "Cormorant Upright", serif;
-  font-size: 30px;
+  font-size: 22px;
   text-align: center;
   color: #fafafa;
 }
 
-.home_container h5 {
+.home_container h5 { /* Home page h5 style */
   color: #fafafa;
-  font-family: 'Hepta Slab', serif;
+  font-family: "Hepta Slab", serif;
   font-weight: 500;
   text-align: center;
   padding-bottom: 30px;
 }
 
-.home_container p {
+.home_container p { /* Home page text style */
   color: #fafafa;
-  font-family: 'Hepta Slab', serif;
+  font-family: "Hepta Slab", serif;
   font-weight: 300;
   padding-bottom: 10px;
 }
 
-.home_container {
+.home_container { /* Home container style */
   background-color: #b79567;
+}
+
+.Home_image { /* homepage image styling */
+  height: inherit;
+  width: inherit;
+  cursor: pointer;
+}
+
+.home_image_width { /* homepage image positioning */
+  width: 100% !important;
+  padding-bottom: 15px !important;
 }
 
 /*---------Home Page---------*/
 
-.recipe_header {
+/*---------Recipe Page---------*/
+
+.recipe_header { /* recipe primary tab title style */ 
   font-size: 24px;
   letter-spacing: 1px;
 }
 
-.recipe_instructions {
+.recipe_instructions { /* reicpe secondary tab style */
   font-size: 18px;
 }
 
-.expand_header {
+.expand_header { /* expand icon styling */
   margin-top: auto;
 }
 
-.recipe_styling {
+.recipe_styling { /* recipe context styling */
   font-size: 16px;
   padding-bottom: 5px;
 }
 
-.instructions_styling {
+.instructions_styling { /* instructions context styling */
   padding-bottom: 10px;
   font-size: 16px;
 }
 
-.Home_image {
-    height: inherit;
-    width: inherit;
-    cursor: pointer;
+/*---------Home Page---------*/
+
+/*---------Edit & Add Page---------*/
+
+.form-style { /* Form background colour */
+    background-color: #b79567;
 }
 
-.home_image_width {
-    width: 100%!important;
-    padding-bottom: 15px!important;
+.input-field { /* Input field border colour */
+    color: #fafafa!important;
 }
+
+div input { /* Input border colour */
+    border-color: #fafafa!important;
+}
+
+div textarea { /* textarea border style */
+    border-color: #fafafa!important;
+}
+
+.caret { /* Caret colour */
+    color: #fafafa!important;
+}
+
+.label-style { /* Label text colour */
+    color: #fafafa!important;
+}
+
+.button-padding { /* button spacing */
+    padding-bottom: 10px!important;
+}
+/*---------Edit & Add Page---------*/

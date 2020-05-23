@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="container home_container">
-  <div class="col s12">
+  <div class="col-12">
     <h1 class="Home_Header">Welcome To Lozzy's Lovely Recipes</h1>
     <p>
       This website was designed for you to store and share recipe ideas. If you
@@ -15,7 +15,7 @@
     </p>
   </div>
   <hr class="fullWidthDivider" />
-  <div class="col s12">
+  <div class="col-12">
     <h2>Page Descriptions</h2>
     <h3>Recipes</h3>
     <p>
@@ -48,7 +48,7 @@
     </h5>
   </div>
   <div class="row">
-    <div class="col s4 home_image_width">
+    <div class="col-12 col-md-4 home_image_width">
     <h3 class="image_title">Recipes</h3>
       <img
         src="./static/images/HomeImage1.jpg"
@@ -57,7 +57,7 @@
         onclick="location='{{url_for('get_recipes')}}'"
       />
     </div>
-    <div class="col s4 home_image_width">
+    <div class="col-12 col-md-4 home_image_width">
     <h3 class="image_title">Add Recipes</h3>
       <img
         src="./static/images/HomeImage2.jpg"
@@ -66,7 +66,7 @@
         onclick="location='{{url_for('get_addrecipes')}}'"
       />
     </div>
-    <div class="col s4 home_image_width">
+    <div class="col-12 col-md-4 home_image_width">
     <h3 class="image_title">Amend Recipes</h3>
       <img
         src="./static/images/HomeImage3.jpg"

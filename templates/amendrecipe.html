@@ -1,16 +1,16 @@
 {% extends "base.html" %} {% block content %}
-<h1>Amend Recipe Page</h1>
+<h1 class="page-title">Amend Recipe Page</h1>
 <ul class="collapsible" data-collapsible="accordion">
         {% for recipe in recipe_lists %}
         <li>
             <div class="collapsible-header">
-                <div class="col s3">
+                <div class="col-3">
                     <i class="material-icons">expand_more</i>
                     <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
                     <a href="{{url_for('get_editrecipes', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
                     
                 </div>
-                <div class=" task_header col s9">
+                <div class=" task_header col-9">
                     <strong>{{recipe.recipe_name}}</strong>
                 </div>
             </div>

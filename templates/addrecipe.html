@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block content %}
-<h1>Add Recipe Page</h1>
-<div class="container">
+<h1 class="page-title">Add Recipe Page</h1>
+<div class="container form-style">
   <div class="row">
     <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
-      <div class="input-field col s12">
+      <div class="input-field col-12">
         <input
           placeholder="Recipe Name"
           id=""
@@ -20,16 +20,7 @@
           {% endfor %}
         </select>
       </div>
-      <div class="input-field col s12">
-        <p>Please enter a valid image link. If you don't it'll appear blank.</p>
-        <input
-          placeholder="Image Link"
-          id=""
-          name="href"
-          type="text"
-          class="validate"
-        />
-      </div>
+
       <div class="input-field col s6">
         <select name="ptime">
           <option value="" disabled selected>Time to Prep</option>
@@ -64,27 +55,25 @@
       </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea id="" class="materialize-textarea" name="tools"></textarea>
-        <label>Cooking Utensils</label>
+        <textarea rows="6" class="materialize-textarea" name="tools"></textarea>
+        <label class="label-style">Cooking Utensils</label>
       </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea id="" class="materialize-textarea" name="ingredients"></textarea>
-        <label>Ingredients</label>
+        <textarea rows="6" class="materialize-textarea" name="ingredients"></textarea>
+        <label class="label-style">Ingredients</label>
       </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea id="" class="materialize-textarea" name="method"></textarea>
-        <label>How to Cook</label>
+        <textarea rows="6" class="materialize-textarea" name="method"></textarea>
+        <label class="label-style">How to Cook</label>
       </div>
-      <div class="row">
-        <div class="col s12">
+        <div class="col s12 button-padding">
           <button class="btn waves-effect waves-light" type="submit">
             Add Recipe
             <i class="material-icons right">playlist_add</i>
           </button>
         </div>
-      </div>
     </form>
   </div>
 </div>

@@ -34,7 +34,7 @@
     <header>
       <nav class="nav-extended Nav_Container">
         <div class="nav-wrapper row">
-          <a href="{{url_for('get_homepage')}}" class="col s12 Nav_Header"
+          <a href="{{url_for('get_homepage')}}" class="col-12 Nav_Header"
             >Lozzy's Lovely Recipes</a
           >
         </div>
@@ -43,27 +43,27 @@
             ><i class="material-icons">menu</i></a
           >
           <ul id="nav-mobile" class="row hide-on-med-and-down">
-            <li class="col s3">
+            <li class="col-3">
               <a href="{{url_for('get_homepage')}}" class="Nav_Options">Home</a>
             </li>
-            <li class="col s3">
+            <li class="col-3">
               <a href="{{url_for('get_recipes')}}" class="Nav_Options"
                 >Recipes</a
               >
             </li>
-            <li class="col s3">
+            <li class="col-3">
               <a href="{{url_for('get_addrecipes')}}" class="Nav_Options"
                 >Add Recipes</a
               >
             </li>
-            <li class="col s3">
+            <li class="col-3">
               <a href="{{url_for('get_amendrecipes')}}" class="Nav_Options"
                 >Amend Recipes</a
               >
             </li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li class="">Menu</li>
+            <li class="side-title">Menu</li>
             <li>
               <a href="{{url_for('get_homepage')}}" class="Nav_Options">Home</a>
             </li>
