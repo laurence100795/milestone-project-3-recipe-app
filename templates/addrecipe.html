@@ -3,10 +3,9 @@
 <div class="container form-style">
   <div class="row">
     <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
-      <div class="input-field col-12">
+      <div class="input-field">
         <input
           placeholder="Recipe Name"
-          id=""
           name="recipe_name"
           type="text"
           class="validate"
@@ -14,7 +13,7 @@
       </div>
       <div class="input-field col s6">
         <select name="level">
-          <option value="" disabled selected>Choose your difficulty</option>
+          <option disabled selected>Difficulty</option>
           {% for diff in difficulty %}
           <option value="{{diff.level}}">{{diff.level}}</option>
           {% endfor %}
@@ -23,7 +22,7 @@
 
       <div class="input-field col s6">
         <select name="ptime">
-          <option value="" disabled selected>Time to Prep</option>
+          <option disabled selected>Time to Prep</option>
           {% for prep in prep_time %}
           <option value="{{prep.ptime}}">{{prep.ptime}}</option>
           {% endfor %}
@@ -31,7 +30,7 @@
       </div>
       <div class="input-field col s6">
         <select name="time">
-          <option value="" disabled selected>Time to Cook</option>
+          <option disabled selected>Time to Cook</option>
           {% for cook in cook_time %}
           <option value="{{cook.time}}">{{cook.time}}</option>
           {% endfor %}
@@ -39,15 +38,15 @@
       </div>
       <div class="input-field col s6">
         <select name="num">
-          <option value="" disabled selected>Serves up to</option>
+          <option disabled selected>Serves up to</option>
           {% for serve in serves %}
           <option value="{{serve.num}}">{{serve.num}}</option>
           {% endfor %}
         </select>
       </div>
-      <div class="input-field col s6">
+      <div class="input-field col m6 s12">
         <select name="name">
-          <option value="" disabled selected>Dietary Requirements</option>
+          <option disabled selected>Dietary Requirements</option>
           {% for diet in diets %}
           <option value="{{diet.name}}">{{diet.name}}</option>
           {% endfor %}
@@ -60,20 +59,31 @@
       </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea rows="6" class="materialize-textarea" name="ingredients"></textarea>
+        <textarea
+          rows="6"
+          class="materialize-textarea"
+          name="ingredients"
+        ></textarea>
         <label class="label-style">Ingredients</label>
       </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea rows="6" class="materialize-textarea" name="method"></textarea>
+        <textarea
+          rows="6"
+          class="materialize-textarea"
+          name="method"
+        ></textarea>
         <label class="label-style">How to Cook</label>
       </div>
-        <div class="col s12 button-padding">
-          <button class="btn waves-effect waves-light recipe_button" type="submit">
-            Add Recipe
-            <i class="material-icons right">playlist_add</i>
-          </button>
-        </div>
+      <div class="col s12 button-padding">
+        <button
+          class="btn waves-effect waves-light recipe_button"
+          type="submit"
+        >
+          Add Recipe
+          <i class="material-icons right">playlist_add</i>
+        </button>
+      </div>
     </form>
   </div>
 </div>

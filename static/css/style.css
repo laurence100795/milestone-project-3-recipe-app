@@ -140,17 +140,20 @@ a {
 }
 
 @media only screen and (max-width: 1050px) {
-  .image_title {
+  .image_title { /* image title text size change */
     font-size: 20px !important;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .image_title {
+  .image_title { /* image title text size change */
     font-size: 28px !important;
   }
-  .Home_Header {
+  .Home_Header { /* home page title text size change */
     font-size: 46px;
+  }
+  .select-wrapper input.select-dropdown { /* change size of text in selection boxes in add/edit forms */
+    font-size: 12px!important;
   }
 }
 /*---------Home Page---------*/
@@ -215,7 +218,7 @@ ul {
   height: auto !important;
 }
 
-.amend-content-padding {
+.amend-content-padding { /* button positioning inside collapsible amend page */
   padding-top: 10px;
   padding-bottom: 0;
 }
@@ -235,17 +238,17 @@ ul {
 }
 
 .edit_button {
-  /* edit button  stlying */
-  background-color: #fafafa !important;
-  color: #b79567 !important;
+  /* edit button stlying */
+  background-color: #8e8e8e !important;
+  color: #fafafa !important;
   margin: 5px;
 }
 
 .edit_button:hover, /* edit button interactive stlying */
 .edit_button:active,
 .edit_button:link {
-  background-color: #8e8e8e !important;
-  color: #fafafa !important;
+  background-color: #fafafa !important;
+  color: #8e8e8e !important;
 }
 
 /*---------Recipe & Edit Page---------*/
@@ -287,15 +290,11 @@ div textarea {
   padding-bottom: 10px !important;
 }
 
-.recipe_button {
+.recipe_button { /* recipe button colour change */
   background-color: #dab17b;
 }
 
-.recipe_button {
-  background-color: #dab17b;
-}
-
-.recipe_button:hover,
+.recipe_button:hover, /* recipe button effect colour change */
 .recipe_button:active,
 .recipe_button:link {
   background-color: #e2d0b7 !important;

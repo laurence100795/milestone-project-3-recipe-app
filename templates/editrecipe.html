@@ -5,7 +5,6 @@
   <div class="row">
     <form
       action="{{ url_for('update_recipe', recipe_id=recipe._id) }}"
-      class="col-12"
       method="POST"
     >
       <div class="input-field col s12">
@@ -20,7 +19,7 @@
       </div>
       <div class="input-field col s6">
         <select name="level">
-          <option value="" disabled selected>Choose your difficulty</option>
+          <option value="" disabled selected>Difficulty</option>
           {% for diff in difficulty %} {% if diff.level == recipe.level %}
           <option value="{{diff.level}}" selected>{{diff.level}}</option>
           {% else %}
@@ -59,7 +58,7 @@
           {% endif %} {% endfor %}
         </select>
       </div>
-      <div class="input-field col s6">
+      <div class="input-field col m6 s12">
         <select name="name">
           <option value="" disabled selected>Dietary Requirements</option>
           {% for diet in diets %} {% if diet.name == recipe.name %}
