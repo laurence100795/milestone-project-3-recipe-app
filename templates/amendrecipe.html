@@ -13,24 +13,12 @@
 			</div>
 		</div>
 		<div class="collapsible-body amend-content-padding">
-			<a class="waves-effect waves-light btn modal-trigger delete_button" href="#modal1">Delete</a>
+			<a class="waves-effect waves-light btn modal-trigger delete_button" href="{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete</a>
 			<a href="{{url_for('get_editrecipes', recipe_id=recipe._id)}}"
 				class="waves-effect waves-light btn btn_small edit_button">Edit</a>
 		</div>
 	</li>
 	<div class="col s12 recipe_divider"></div>
-
-	<div id="modal1" class="modal">
-		<div class="modal-content">
-			<h4>You're about to delete a recipe!</h4>
-			<p>If you're sure about going through with this please proceed but if this isn't one of your own recommend recipes please close without deleting</p>
-            <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect btn-flat"><strong>Close</strong></a>
-            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="modal-action modal-close waves-effect btn-flat">Delete</a>
-            </div>
-        </div>
-
-	</div>
 	{% endfor %}
 
 </ul>

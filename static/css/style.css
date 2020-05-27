@@ -231,8 +231,7 @@ ul {
 }
 
 .delete_button:hover, /* delete button interactive stlying */
-.delete_button:active,
-.delete_button:link {
+.delete_button:active {
   background-color: #7b603c !important;
   color: #fafafa !important;
 }
@@ -245,8 +244,7 @@ ul {
 }
 
 .edit_button:hover, /* edit button interactive stlying */
-.edit_button:active,
-.edit_button:link {
+.edit_button:active {
   background-color: #fafafa !important;
   color: #8e8e8e !important;
 }
